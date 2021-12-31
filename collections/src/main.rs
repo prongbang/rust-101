@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 fn main() {
     println!("Collection");
 
@@ -18,4 +20,23 @@ fn main() {
     let v: Vec<i32> = vec![1, 2, 3, 4, 5];
     println!("v = {:?}", v);
 
+    println!("HashMap mutable insert");
+    let mut hm: HashMap<i32, String> = HashMap::new();
+    hm.insert(1, "one".to_string());
+    println!("hm = {:?}", hm);
+
+    println!("HashMap get by key");
+    let one = hm.get(&1);
+    println!("one = {:?}", one);
+
+    println!("HashMap get value from Option with match");
+    let one_value = match one {
+        Some(x) => x,
+        None => "None"
+    };
+    println!("one_value = {:?}", one_value);
+
+    println!("HashMap get value from Option with unwrap or enum");
+    let one_value = one.unwrap();
+    println!("one_value = {:?}", one_value);
 }

@@ -1,3 +1,6 @@
+mod generic_function;
+mod generic_struct;
+
 fn main() {
     println!("Closures or Annonymous Functions or Lambdas");
 
@@ -24,6 +27,8 @@ fn main() {
     let sum = |x: i32, y: i32| x + y;
     println!("{}", calculate_where(1, 2, sum));
 
+    println!("Generic function");
+    generic_function::run_generic();
 }
 
 fn calculate(x: i32, y: i32, f: fn(i32, i32) -> i32) -> i32 {
@@ -35,8 +40,8 @@ fn calculate_defined<F: Fn(i32, i32) -> i32>(x: i32, y: i32, f: F) -> i32 {
 }
 
 fn calculate_where<F>(x: i32, y: i32, f: F) -> i32
-where 
-    F: Fn(i32, i32) -> i32 
+    where
+        F: Fn(i32, i32) -> i32
 {
     f(x, y)
 }

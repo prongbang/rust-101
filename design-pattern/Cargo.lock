@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "function"
+name = "design-pattern"
 version = "0.1.0"

@@ -15,15 +15,15 @@ fn main() {
     };
     println!("{}", sum(1, 2));
 
-    println!("Closures parametor with function or higher order function sum inline function");
+    println!("Closures parameter with function or higher order function sum inline function");
     let sum = |x: i32, y: i32| x + y;
     println!("{}", calculate(1, 2, sum));
 
-    println!("Closures parametor with function or higher order function sum generic defined type function");
+    println!("Closures parameter with function or higher order function sum generic defined type function");
     let sum = |x: i32, y: i32| x + y;
     println!("{}", calculate_defined(1, 2, sum));
 
-    println!("Closures parametor with function or higher order function sum where define type function");
+    println!("Closures parameter with function or higher order function sum where define type function");
     let sum = |x: i32, y: i32| x + y;
     println!("{}", calculate_where(1, 2, sum));
 
